@@ -13,7 +13,10 @@ const useInput = (defaultValue: string) => {
   });
 
   function handleInputToTimeFormats(e: moment.MomentInput) {
-    const current = moment(+e);
+    let current = moment(+e);
+    if (current.valueOf() === NaN) {
+      current = moment(e)
+    }
     return mSetValue({
       unixtime: current.valueOf(),
       slash: current.format("YYYY/MM/DD HH:mm:ss"),
