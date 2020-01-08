@@ -23,6 +23,7 @@
     "eject": "react-scripts eject",
     "deploy": "yarn build && gh-pages -d build"
   },
+  "homepage": "https://mkusaka.github.io/unixtime",
   "eslintConfig": {
     "extends": "react-app"
   },
